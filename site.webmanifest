@@ -1,0 +1,27 @@
+{
+    "name": "Jorge Blanco - Diseñador Web Freelance",
+    "short_name": "Jorge Blanco",
+    "description": "Servicios freelance profesionales: Diseño y desarrollo web, landing pages optimizadas, ingreso de datos preciso y traducción de documentos.",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#2b3a67",
+    "orientation": "portrait-primary",
+    "icons": [
+        {
+            "src": "/images/logoSinFondo16px.png",
+            "sizes": "16x16",
+            "type": "image/png"
+        },
+        {
+            "src": "/images/logoSinFondo32px.png",
+            "sizes": "32x32",
+            "type": "image/png"
+        },
+        {
+            "src": "/images/logoSinFondo180px.png",
+            "sizes": "180x180",
+            "type": "image/png"
+        }
+    ]
+}

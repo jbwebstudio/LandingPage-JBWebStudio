@@ -1,0 +1,54 @@
+/* ===== CORRECCIONES DE LAYOUT ESPECÍFICAS ===== */
+/* Solo correcciones que no están cubiertas por otros archivos CSS */
+
+/* Correcciones específicas para overflow horizontal */
+body {
+    overflow-x: hidden;
+}
+
+html {
+    overflow-x: hidden;
+}
+
+/* Correcciones para elementos que se salen del viewport */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+table {
+    width: 100%;
+    table-layout: fixed;
+    word-wrap: break-word;
+}
+
+pre {
+    overflow-x: auto;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+/* Correcciones para elementos flotantes */
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Asegurar que el contenido no se salga del contenedor */
+.content-wrapper {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+/* Correcciones específicas para elementos problemáticos */
+.hero-content,
+.section-content,
+.card-content {
+    width: 100%;
+    max-width: 100%;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}

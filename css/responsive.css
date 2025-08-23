@@ -1,0 +1,413 @@
+/* ===== OPTIMIZACIONES DE RESPONSIVIDAD ===== */
+/* Mejoras específicas para experiencia móvil */
+
+/* ===== BREAKPOINTS PERSONALIZADOS ===== */
+:root {
+    --breakpoint-xs: 320px;
+    --breakpoint-sm: 480px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 1024px;
+    --breakpoint-xl: 1200px;
+    --breakpoint-2xl: 1400px;
+}
+
+/* ===== UTILIDADES RESPONSIVE MEJORADAS ===== */
+
+/* Container responsive mejorado */
+.container {
+    width: 100%;
+    margin: 0 auto;
+    padding-left: var(--spacing-lg);
+    padding-right: var(--spacing-lg);
+}
+
+@media (min-width: 576px) {
+    .container {
+        max-width: 540px;
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        max-width: 720px;
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        max-width: 960px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1140px;
+    }
+}
+
+@media (min-width: 1400px) {
+    .container {
+        max-width: 1320px;
+    }
+}
+
+/* ===== GRID SYSTEM RESPONSIVE ===== */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: calc(var(--spacing-md) * -0.5);
+    margin-right: calc(var(--spacing-md) * -0.5);
+}
+
+.col {
+    flex: 1;
+    padding-left: calc(var(--spacing-md) * 0.5);
+    padding-right: calc(var(--spacing-md) * 0.5);
+}
+
+/* Columnas específicas */
+.col-1 { flex: 0 0 8.333333%; }
+.col-2 { flex: 0 0 16.666667%; }
+.col-3 { flex: 0 0 25%; }
+.col-4 { flex: 0 0 33.333333%; }
+.col-5 { flex: 0 0 41.666667%; }
+.col-6 { flex: 0 0 50%; }
+.col-7 { flex: 0 0 58.333333%; }
+.col-8 { flex: 0 0 66.666667%; }
+.col-9 { flex: 0 0 75%; }
+.col-10 { flex: 0 0 83.333333%; }
+.col-11 { flex: 0 0 91.666667%; }
+.col-12 { flex: 0 0 100%; }
+
+/* ===== OPTIMIZACIONES MÓVILES ESPECÍFICAS ===== */
+
+/* Mejoras de touch targets */
+@media (max-width: 768px) {
+    .btn,
+    .nav-link,
+    .mobile-nav-link,
+    .social-link,
+    .service-card,
+    .portfolio-item {
+        min-height: 44px;
+        min-width: 44px;
+    }
+    
+    /* Espaciado mejorado para móviles */
+    .section {
+        padding: var(--spacing-2xl) 0;
+    }
+    
+    .section-header {
+        margin-bottom: var(--spacing-2xl);
+    }
+    
+    /* Tipografía responsive mejorada */
+    h1 {
+        font-size: clamp(2rem, 6vw, 3rem);
+        line-height: 1.2;
+    }
+    
+    h2 {
+        font-size: clamp(1.5rem, 5vw, 2.5rem);
+        line-height: 1.3;
+    }
+    
+    h3 {
+        font-size: clamp(1.25rem, 4vw, 2rem);
+        line-height: 1.4;
+    }
+    
+    p {
+        font-size: clamp(0.9rem, 3vw, 1.1rem);
+        line-height: 1.6;
+    }
+}
+
+/* ===== OPTIMIZACIONES PARA PANTALLAS PEQUEÑAS ===== */
+@media (max-width: 480px) {
+    .container {
+        padding-left: var(--spacing-sm);
+        padding-right: var(--spacing-sm);
+    }
+    
+    .row {
+        margin-left: calc(var(--spacing-sm) * -0.5);
+        margin-right: calc(var(--spacing-sm) * -0.5);
+    }
+    
+    .col {
+        padding-left: calc(var(--spacing-sm) * 0.5);
+        padding-right: calc(var(--spacing-sm) * 0.5);
+    }
+    
+    /* Todas las columnas se vuelven full-width en móvil */
+    [class*="col-"] {
+        flex: 0 0 100%;
+        margin-bottom: var(--spacing-md);
+    }
+    
+    /* Botones full-width en móvil */
+    /* Solo overrides específicos para móvil */
+    @media (max-width: 768px) {
+        .btn {
+            width: 100%;
+            justify-content: center;
+        }
+    }
+    
+    /* Formularios optimizados */
+    .form-group {
+        margin-bottom: var(--spacing-lg);
+    }
+    
+    .form-control {
+        font-size: 16px; /* Previene zoom en iOS */
+        padding: 12px 16px;
+    }
+}
+
+/* ===== OPTIMIZACIONES PARA TABLETS ===== */
+@media (min-width: 481px) and (max-width: 768px) {
+    .col-md-1 { flex: 0 0 8.333333%; }
+    .col-md-2 { flex: 0 0 16.666667%; }
+    .col-md-3 { flex: 0 0 25%; }
+    .col-md-4 { flex: 0 0 33.333333%; }
+    .col-md-5 { flex: 0 0 41.666667%; }
+    .col-md-6 { flex: 0 0 50%; }
+    .col-md-7 { flex: 0 0 58.333333%; }
+    .col-md-8 { flex: 0 0 66.666667%; }
+    .col-md-9 { flex: 0 0 75%; }
+    .col-md-10 { flex: 0 0 83.333333%; }
+    .col-md-11 { flex: 0 0 91.666667%; }
+    .col-md-12 { flex: 0 0 100%; }
+}
+
+/* ===== OPTIMIZACIONES PARA DESKTOP ===== */
+@media (min-width: 769px) {
+    .col-lg-1 { flex: 0 0 8.333333%; }
+    .col-lg-2 { flex: 0 0 16.666667%; }
+    .col-lg-3 { flex: 0 0 25%; }
+    .col-lg-4 { flex: 0 0 33.333333%; }
+    .col-lg-5 { flex: 0 0 41.666667%; }
+    .col-lg-6 { flex: 0 0 50%; }
+    .col-lg-7 { flex: 0 0 58.333333%; }
+    .col-lg-8 { flex: 0 0 66.666667%; }
+    .col-lg-9 { flex: 0 0 75%; }
+    .col-lg-10 { flex: 0 0 83.333333%; }
+    .col-lg-11 { flex: 0 0 91.666667%; }
+    .col-lg-12 { flex: 0 0 100%; }
+}
+
+/* ===== UTILIDADES DE VISIBILIDAD RESPONSIVE ===== */
+
+/* Ocultar en móvil */
+@media (max-width: 767px) {
+    .d-mobile-none { display: none !important; }
+}
+
+/* Mostrar solo en móvil */
+@media (min-width: 768px) {
+    .d-mobile-only { display: none !important; }
+}
+
+/* Ocultar en tablet */
+@media (min-width: 481px) and (max-width: 768px) {
+    .d-tablet-none { display: none !important; }
+}
+
+/* Mostrar solo en tablet */
+@media (max-width: 480px), (min-width: 769px) {
+    .d-tablet-only { display: none !important; }
+}
+
+/* Ocultar en desktop */
+@media (min-width: 769px) {
+    .d-desktop-none { display: none !important; }
+}
+
+/* Mostrar solo en desktop */
+@media (max-width: 768px) {
+    .d-desktop-only { display: none !important; }
+}
+
+/* ===== OPTIMIZACIONES DE PERFORMANCE MÓVIL ===== */
+
+/* Reducir animaciones en dispositivos de bajo rendimiento */
+@media (max-width: 768px) and (prefers-reduced-motion: no-preference) {
+    * {
+        animation-duration: 0.3s !important;
+        transition-duration: 0.3s !important;
+    }
+}
+
+/* Optimizar imágenes para móvil */
+@media (max-width: 768px) {
+    img {
+        height: auto;
+        max-width: 100%;
+    }
+    
+    .hero-background,
+    .particles-bg::before {
+        opacity: 0.5;
+    }
+}
+
+/* ===== MEJORAS DE ACCESIBILIDAD MÓVIL ===== */
+
+/* Aumentar área de toque para elementos interactivos */
+@media (max-width: 768px) {
+    .btn,
+    .nav-link,
+    .social-link,
+    input[type="submit"],
+    input[type="button"],
+    button {
+        padding: 12px 20px;
+        min-height: 44px;
+    }
+    
+    /* Mejorar contraste en móvil */
+    .text-secondary {
+        color: var(--text-primary);
+        opacity: 0.8;
+    }
+}
+
+/* ===== OPTIMIZACIONES ESPECÍFICAS POR COMPONENTE ===== */
+
+/* Servicios responsive */
+@media (max-width: 768px) {
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-lg);
+    }
+    
+    .service-card {
+        padding: var(--spacing-lg);
+    }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Portfolio responsive */
+@media (max-width: 768px) {
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-lg);
+    }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+    .portfolio-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Testimonios responsive */
+@media (max-width: 768px) {
+    .testimonials-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-lg);
+    }
+}
+
+/* Footer responsive */
+@media (max-width: 768px) {
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-xl);
+        text-align: center;
+    }
+    
+    .footer-section {
+        margin-bottom: var(--spacing-lg);
+    }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+    .footer-content {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* ===== OPTIMIZACIONES PARA PANTALLAS ULTRA ANCHAS ===== */
+@media (min-width: 1400px) {
+    .container {
+        max-width: 1320px;
+    }
+    
+    .section {
+        padding: var(--spacing-4xl) 0;
+    }
+}
+
+/* ===== OPTIMIZACIONES PARA ORIENTACIÓN ===== */
+@media (orientation: landscape) and (max-height: 500px) {
+    .hero {
+        min-height: 100vh;
+        padding-top: 60px;
+    }
+    
+    .hero-content {
+        padding: var(--spacing-lg) 0;
+    }
+    
+    .hero-stats {
+        margin-top: var(--spacing-lg);
+    }
+}
+
+/* ===== SOPORTE PARA HOVER EN DISPOSITIVOS TÁCTILES ===== */
+@media (hover: none) and (pointer: coarse) {
+    .btn:hover,
+    .service-card:hover,
+    .portfolio-item:hover {
+        transform: none;
+    }
+    
+    .btn:active,
+    .service-card:active,
+    .portfolio-item:active {
+        transform: scale(0.98);
+        transition: transform 0.1s ease;
+    }
+}
+
+/* ===== OPTIMIZACIONES PARA MODO OSCURO MÓVIL ===== */
+@media (prefers-color-scheme: dark) and (max-width: 768px) {
+    .glass-effect {
+        background: rgba(30, 41, 59, 0.8);
+        border-color: rgba(255, 255, 255, 0.1);
+    }
+    
+    .hero {
+        background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+    }
+}
+
+/* ===== MEJORAS DE RENDIMIENTO ===== */
+@media (max-width: 768px) {
+    /* Reducir efectos costosos en móvil */
+    .particles-bg::before,
+    .hero-particles,
+    .hero-shapes {
+        display: none;
+    }
+    
+    /* Simplificar sombras */
+    .shadow-xl,
+    .shadow-2xl {
+        box-shadow: var(--shadow-md);
+    }
+    
+    /* Reducir blur effects */
+    .glass-effect {
+        backdrop-filter: blur(10px);
+    }
+}

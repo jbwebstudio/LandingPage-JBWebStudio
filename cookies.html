@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Política de Cookies - JB Web Studio</title>
+    <meta
+      name="description"
+      content="Política de cookies de JB Web Studio. Información sobre el uso de cookies en nuestro sitio web."
+    />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Favicon -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="images/logoSinFondo32px.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="images/logoSinFondo16px.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="images/logoSinFondo180px.png"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/variables.css" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/components/navbar.css" />
+    <link rel="stylesheet" href="css/components/footer.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+
+    <style>
+      /* Estilos específicos para la página de cookies */
+      .cookies-page {
+        min-height: 100vh;
+        background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+        padding-top: 100px;
+      }
+
+      .cookies-container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 0 20px 60px;
+      }
+
+      .cookies-header {
+        text-align: center;
+        margin-bottom: 50px;
+        padding: 40px 0;
+        background: white;
+        border-radius: 20px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      }
+
+      .cookies-title {
+        font-size: clamp(2rem, 4vw, 3rem);
+        font-weight: 700;
+        color: var(--text-primary);
+        margin-bottom: 16px;
+      }
+
+      .cookies-subtitle {
+        font-size: 1.1rem;
+        color: var(--text-secondary);
+        margin: 0;
+        font-weight: 400;
+      }
+
+      .cookies-content {
+        background: white;
+        border-radius: 20px;
+        padding: 40px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        margin-bottom: 30px;
+      }
+
+      .cookies-section {
+        margin-bottom: 40px;
+        padding-bottom: 30px;
+        border-bottom: 1px solid #e2e8f0;
+      }
+
+      .cookies-section:last-child {
+        border-bottom: none;
+        margin-bottom: 0;
+        padding-bottom: 0;
+      }
+
+      .cookies-section h2 {
+        color: var(--primary-color);
+        font-size: 1.5rem;
+        font-weight: 600;
+        margin-bottom: 20px;
+        padding-bottom: 10px;
+        border-bottom: 2px solid var(--primary-color);
+        display: inline-block;
+      }
+
+      .cookies-section h3 {
+        color: var(--text-primary);
+        font-size: 1.2rem;
+        font-weight: 600;
+        margin: 25px 0 15px 0;
+      }
+
+      .cookies-section p {
+        color: var(--text-secondary);
+        line-height: 1.7;
+        margin-bottom: 16px;
+        font-size: 1rem;
+      }
+
+      .cookies-section ul {
+        color: var(--text-secondary);
+        line-height: 1.7;
+        margin: 16px 0;
+        padding-left: 20px;
+      }
+
+      .cookies-section li {
+        margin-bottom: 8px;
+      }
+
+      .cookies-section strong {
+        color: var(--text-primary);
+        font-weight: 600;
+      }
+
+      .cookie-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 20px 0;
+        background: #f8fafc;
+        border-radius: 8px;
+        overflow: hidden;
+      }
+
+      .cookie-table th {
+        background: var(--primary-color);
+        color: white;
+        padding: 12px;
+        text-align: left;
+        font-weight: 600;
+      }
+
+      .cookie-table td {
+        padding: 12px;
+        border-bottom: 1px solid #e2e8f0;
+      }
+
+      .cookie-table tr:last-child td {
+        border-bottom: none;
+      }
+
+      .contact-info {
+        background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
+        padding: 30px;
+        border-radius: 15px;
+        margin-top: 30px;
+        text-align: center;
+      }
+
+      .contact-info h3 {
+        color: var(--primary-color);
+        margin-bottom: 15px;
+        font-size: 1.3rem;
+      }
+
+      .contact-info p {
+        margin-bottom: 10px;
+      }
+
+      .contact-info a {
+        color: var(--primary-color);
+        text-decoration: none;
+        font-weight: 500;
+      }
+
+      .contact-info a:hover {
+        text-decoration: underline;
+      }
+
+      .back-to-home {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        color: var(--primary-color);
+        text-decoration: none;
+        font-weight: 500;
+        padding: 12px 24px;
+        border: 2px solid var(--primary-color);
+        border-radius: 10px;
+        transition: all 0.3s ease;
+        margin-top: 20px;
+      }
+
+      .back-to-home:hover {
+        background: var(--primary-color);
+        color: white;
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(37, 99, 235, 0.3);
+      }
+
+      .highlight-box {
+        background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);
+        border-left: 4px solid var(--primary-color);
+        padding: 20px;
+        border-radius: 8px;
+        margin: 20px 0;
+      }
+
+      .highlight-box p {
+        margin: 0;
+        color: #1e40af;
+        font-weight: 500;
+      }
+
+      .warning-box {
+        background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+        border-left: 4px solid #f59e0b;
+        padding: 20px;
+        border-radius: 8px;
+        margin: 20px 0;
+      }
+
+      .warning-box p {
+        margin: 0;
+        color: #92400e;
+        font-weight: 500;
+      }
+
+      /* Estilos específicos para el footer negro */
+      .footer {
+        background: #000000 !important;
+        color: #ffffff;
+      }
+
+      .footer-bottom {
+        background: #000000;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        padding: 25px 0;
+      }
+
+      .footer-bottom-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 20px;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+
+      .copyright {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+      }
+
+      .copyright p {
+        margin: 0;
+        font-size: var(--font-size-sm, 14px);
+        color: #ffffff;
+        font-family: var(--font-family, Arial, sans-serif);
+      }
+
+      .legal-links {
+        display: flex;
+        gap: 20px;
+      }
+
+      .legal-link {
+        color: #e2e8f0;
+        text-decoration: none;
+        font-size: var(--font-size-xs, 12px);
+        font-family: var(--font-family, Arial, sans-serif);
+        transition: color 0.3s ease;
+      }
+
+      .legal-link:hover {
+        color: #ffffff;
+      }
+
+      /* Responsive */
+      @media (max-width: 768px) {
+        .cookies-content {
+          padding: 25px;
+        }
+
+        .cookies-section h2 {
+          font-size: 1.3rem;
+        }
+
+        .cookie-table {
+          font-size: 0.9rem;
+        }
+
+        .cookie-table th,
+        .cookie-table td {
+          padding: 8px;
+        }
+
+        .footer-bottom-content {
+          flex-direction: column;
+          text-align: center;
+        }
+
+        .legal-links {
+          justify-content: center;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .cookies-content {
+          padding: 20px;
+        }
+
+        .cookies-section h2 {
+          font-size: 1.2rem;
+        }
+
+        .cookie-table {
+          font-size: 0.8rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <div class="nav-logo"></div>
+
+        <div class="nav-menu">
+          <a href="index.html#inicio" class="nav-link">Inicio</a>
+          <a href="index.html#servicios" class="nav-link">Servicios</a>
+          <a href="index.html#portfolio" class="nav-link">Portfolio</a>
+          <a href="index.html#contacto" class="nav-link">Contacto</a>
+        </div>
+
+        <div class="nav-toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="cookies-page">
+      <div class="cookies-container">
+        <!-- Header -->
+        <div class="cookies-header">
+          <h1 class="cookies-title">Política de Cookies</h1>
+          <p class="cookies-subtitle">
+            Información sobre el uso de cookies en JB Web Studio
+          </p>
+          <p
+            style="
+              margin-top: 15px;
+              color: var(--text-secondary);
+              font-size: 0.9rem;
+            "
+          >
+            Última actualización: 15 de enero de 2025
+          </p>
+        </div>
+
+        <!-- Content -->
+        <div class="cookies-content">
+          <!-- 1. ¿Qué son las cookies? -->
+          <div class="cookies-section">
+            <h2>1. ¿Qué son las cookies?</h2>
+
+            <p>
+              Las cookies son pequeños archivos de texto que se almacenan en tu
+              dispositivo (ordenador, tablet o móvil) cuando visitas un sitio
+              web. Estas cookies permiten que el sitio web recuerde tus acciones
+              y preferencias durante un período de tiempo.
+            </p>
+
+            <p>
+              En <strong>JB Web Studio</strong>, utilizamos cookies para mejorar
+              tu experiencia de navegación, analizar el tráfico del sitio web y
+              personalizar el contenido según tus preferencias.
+            </p>
+
+            <div class="highlight-box">
+              <p>
+                <strong>Importante:</strong> Las cookies no pueden dañar tu
+                dispositivo ni contener virus. Son completamente seguras y se
+                utilizan únicamente para mejorar tu experiencia en nuestro sitio
+                web.
+              </p>
+            </div>
+          </div>
+
+          <!-- 2. Tipos de cookies que utilizamos -->
+          <div class="cookies-section">
+            <h2>2. Tipos de cookies que utilizamos</h2>
+
+            <h3>2.1 Según su finalidad</h3>
+
+            <ul>
+              <li>
+                <strong>Cookies técnicas:</strong> Esenciales para el
+                funcionamiento del sitio web
+              </li>
+              <li>
+                <strong>Cookies de personalización:</strong> Permiten recordar
+                tus preferencias
+              </li>
+              <li>
+                <strong>Cookies de análisis:</strong> Nos ayudan a entender cómo
+                interactúas con nuestro sitio
+              </li>
+              <li>
+                <strong>Cookies de marketing:</strong> Utilizadas para mostrar
+                contenido relevante
+              </li>
+            </ul>
+
+            <h3>2.2 Según su duración</h3>
+
+            <ul>
+              <li>
+                <strong>Cookies de sesión:</strong> Se eliminan cuando cierras
+                el navegador
+              </li>
+              <li>
+                <strong>Cookies persistentes:</strong> Permanecen en tu
+                dispositivo durante un tiempo determinado
+              </li>
+            </ul>
+
+            <h3>2.3 Según su origen</h3>
+
+            <ul>
+              <li>
+                <strong>Cookies propias:</strong> Establecidas por JB Web Studio
+              </li>
+              <li>
+                <strong>Cookies de terceros:</strong> Establecidas por servicios
+                externos que utilizamos
+              </li>
+            </ul>
+          </div>
+
+          <!-- 3. Cookies específicas que utilizamos -->
+          <div class="cookies-section">
+            <h2>3. Cookies específicas que utilizamos</h2>
+
+            <table class="cookie-table">
+              <thead>
+                <tr>
+                  <th>Nombre</th>
+                  <th>Tipo</th>
+                  <th>Finalidad</th>
+                  <th>Duración</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>jbws_session</td>
+                  <td>Técnica</td>
+                  <td>Mantener la sesión del usuario</td>
+                  <td>Sesión</td>
+                </tr>
+                <tr>
+                  <td>jbws_preferences</td>
+                  <td>Personalización</td>
+                  <td>Recordar preferencias del usuario</td>
+                  <td>30 días</td>
+                </tr>
+                <tr>
+                  <td>jbws_analytics</td>
+                  <td>Análisis</td>
+                  <td>Analizar el comportamiento del usuario</td>
+                  <td>2 años</td>
+                </tr>
+                <tr>
+                  <td>_ga</td>
+                  <td>Análisis (Google)</td>
+                  <td>Distinguir usuarios únicos</td>
+                  <td>2 años</td>
+                </tr>
+                <tr>
+                  <td>_gid</td>
+                  <td>Análisis (Google)</td>
+                  <td>Distinguir usuarios únicos</td>
+                  <td>24 horas</td>
+                </tr>
+                <tr>
+                  <td>_fbp</td>
+                  <td>Marketing (Facebook)</td>
+                  <td>Seguimiento de conversiones</td>
+                  <td>90 días</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- 4. Finalidad del uso de cookies -->
+          <div class="cookies-section">
+            <h2>4. Finalidad del uso de cookies</h2>
+
+            <h3>4.1 Cookies técnicas</h3>
+            <p>
+              Son imprescindibles para el correcto funcionamiento del sitio web.
+              Permiten:
+            </p>
+            <ul>
+              <li>Navegar por el sitio web</li>
+              <li>Utilizar las diferentes opciones y servicios</li>
+              <li>Controlar el tráfico y la comunicación de datos</li>
+              <li>Identificar la sesión</li>
+              <li>Recordar elementos que integran un pedido</li>
+            </ul>
+
+            <h3>4.2 Cookies de personalización</h3>
+            <p>
+              Permiten recordar información para que accedas al servicio con
+              determinadas características:
+            </p>
+            <ul>
+              <li>Idioma preferido</li>
+              <li>Configuración de pantalla</li>
+              <li>Tipo de navegador</li>
+              <li>Configuración regional</li>
+            </ul>
+
+            <h3>4.3 Cookies de análisis</h3>
+            <p>
+              Nos permiten cuantificar el número de usuarios y realizar análisis
+              estadísticos:
+            </p>
+            <ul>
+              <li>Páginas más visitadas</li>
+              <li>Tiempo de permanencia en el sitio</li>
+              <li>Patrones de navegación</li>
+              <li>Origen del tráfico</li>
+              <li>Errores que se producen</li>
+            </ul>
+
+            <h3>4.4 Cookies de marketing</h3>
+            <p>Permiten la gestión eficaz de espacios publicitarios:</p>
+            <ul>
+              <li>Mostrar anuncios relevantes</li>
+              <li>Controlar la frecuencia de visualización</li>
+              <li>Medir la eficacia de las campañas</li>
+              <li>Personalizar la publicidad</li>
+            </ul>
+          </div>
+
+          <!-- 5. Servicios de terceros -->
+          <div class="cookies-section">
+            <h2>5. Servicios de terceros que utilizan cookies</h2>
+
+            <h3>5.1 Google Analytics</h3>
+            <p>
+              Utilizamos Google Analytics para analizar el uso de nuestro sitio
+              web. Esta herramienta utiliza cookies para recopilar información
+              de forma anónima sobre cómo los visitantes utilizan nuestro sitio.
+            </p>
+            <p>
+              <strong>Más información:</strong>
+              <a href="https://policies.google.com/privacy" target="_blank"
+                >Política de privacidad de Google</a
+              >
+            </p>
+
+            <h3>5.2 Google Ads</h3>
+            <p>
+              Utilizamos Google Ads para mostrar anuncios relevantes. Las
+              cookies nos ayudan a medir la eficacia de nuestras campañas
+              publicitarias.
+            </p>
+
+            <h3>5.3 Facebook Pixel</h3>
+            <p>
+              Utilizamos Facebook Pixel para medir la eficacia de nuestra
+              publicidad en Facebook e Instagram.
+            </p>
+            <p>
+              <strong>Más información:</strong>
+              <a
+                href="https://www.facebook.com/privacy/explanation"
+                target="_blank"
+                >Política de privacidad de Facebook</a
+              >
+            </p>
+
+            <h3>5.4 WhatsApp Business</h3>
+            <p>
+              Integramos WhatsApp Business para facilitar la comunicación
+              directa con nuestros clientes.
+            </p>
+          </div>
+
+          <!-- 6. Gestión de cookies -->
+          <div class="cookies-section">
+            <h2>6. Cómo gestionar las cookies</h2>
+
+            <h3>6.1 Configuración del navegador</h3>
+            <p>
+              Puedes configurar tu navegador para aceptar o rechazar cookies
+              automáticamente, o para que te notifique cuando se vaya a instalar
+              una cookie en tu dispositivo.
+            </p>
+
+            <p><strong>Instrucciones por navegador:</strong></p>
+            <ul>
+              <li>
+                <strong>Chrome:</strong> Configuración > Privacidad y seguridad
+                > Cookies y otros datos de sitios
+              </li>
+              <li>
+                <strong>Firefox:</strong> Opciones > Privacidad y seguridad >
+                Cookies y datos del sitio
+              </li>
+              <li>
+                <strong>Safari:</strong> Preferencias > Privacidad > Cookies y
+                datos de sitios web
+              </li>
+              <li>
+                <strong>Edge:</strong> Configuración > Cookies y permisos del
+                sitio
+              </li>
+            </ul>
+
+            <h3>6.2 Herramientas de terceros</h3>
+            <p>
+              También puedes gestionar las cookies de terceros a través de sus
+              propias herramientas:
+            </p>
+            <ul>
+              <li>
+                <a
+                  href="https://tools.google.com/dlpage/gaoptout"
+                  target="_blank"
+                  >Complemento de inhabilitación de Google Analytics</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://www.facebook.com/settings?tab=ads"
+                  target="_blank"
+                  >Configuración de anuncios de Facebook</a
+                >
+              </li>
+              <li>
+                <a href="http://www.youronlinechoices.com/" target="_blank"
+                  >Your Online Choices</a
+                >
+              </li>
+            </ul>
+
+            <div class="warning-box">
+              <p>
+                <strong>Advertencia:</strong> Si deshabilitas las cookies, es
+                posible que algunas funcionalidades del sitio web no funcionen
+                correctamente.
+              </p>
+            </div>
+          </div>
+
+          <!-- 7. Cookies esenciales -->
+          <div class="cookies-section">
+            <h2>7. Cookies esenciales</h2>
+
+            <p>
+              Algunas cookies son esenciales para el funcionamiento de nuestro
+              sitio web y no pueden ser deshabilitadas. Estas cookies incluyen:
+            </p>
+
+            <ul>
+              <li>Cookies de seguridad que previenen ataques</li>
+              <li>Cookies que mantienen tu sesión activa</li>
+              <li>Cookies que recuerdan tus preferencias de accesibilidad</li>
+              <li>
+                Cookies necesarias para el funcionamiento del formulario de
+                contacto
+              </li>
+            </ul>
+
+            <p>
+              Estas cookies no recopilan información personal identificable y
+              son necesarias para proporcionar los servicios que solicitas.
+            </p>
+          </div>
+
+          <!-- 8. Consentimiento -->
+          <div class="cookies-section">
+            <h2>8. Consentimiento para el uso de cookies</h2>
+
+            <p>
+              Al continuar navegando por nuestro sitio web, aceptas el uso de
+              cookies de acuerdo con esta política. Tu consentimiento es válido
+              para todas las páginas de nuestro sitio web.
+            </p>
+
+            <h3>8.1 Cómo otorgar el consentimiento</h3>
+            <ul>
+              <li>Haciendo clic en "Aceptar" en nuestro banner de cookies</li>
+              <li>Continuando la navegación por el sitio web</li>
+              <li>Utilizando cualquier elemento interactivo del sitio</li>
+            </ul>
+
+            <h3>8.2 Cómo retirar el consentimiento</h3>
+            <p>Puedes retirar tu consentimiento en cualquier momento:</p>
+            <ul>
+              <li>Eliminando las cookies de tu navegador</li>
+              <li>Configurando tu navegador para rechazar cookies</li>
+              <li>Contactándonos directamente</li>
+            </ul>
+          </div>
+
+          <!-- 9. Actualizaciones de la política -->
+          <div class="cookies-section">
+            <h2>9. Actualizaciones de esta política</h2>
+
+            <p>
+              Podemos actualizar esta Política de Cookies periódicamente para
+              reflejar cambios en nuestras prácticas o por otros motivos
+              operativos, legales o reglamentarios.
+            </p>
+
+            <p>Te notificaremos sobre cambios significativos mediante:</p>
+            <ul>
+              <li>Un aviso prominente en nuestro sitio web</li>
+              <li>Actualización de la fecha de "última modificación"</li>
+              <li>Comunicación directa si tienes una cuenta con nosotros</li>
+            </ul>
+
+            <p>
+              Te recomendamos revisar esta política periódicamente para
+              mantenerte informado sobre cómo utilizamos las cookies.
+            </p>
+          </div>
+
+          <!-- 10. Más información -->
+          <div class="cookies-section">
+            <h2>10. Más información sobre cookies</h2>
+
+            <p>
+              Si deseas obtener más información sobre las cookies en general,
+              puedes consultar los siguientes recursos:
+            </p>
+
+            <ul>
+              <li>
+                <a href="https://www.allaboutcookies.org/" target="_blank"
+                  >All About Cookies</a
+                >
+              </li>
+              <li>
+                <a href="https://www.cookiecentral.com/" target="_blank"
+                  >Cookie Central</a
+                >
+              </li>
+              <li>
+                <a href="https://ec.europa.eu/info/cookies_es" target="_blank"
+                  >Información sobre cookies de la Comisión Europea</a
+                >
+              </li>
+            </ul>
+
+            <p>
+              También puedes contactar con las autoridades de protección de
+              datos de tu país si tienes preguntas sobre tus derechos en
+              relación con las cookies.
+            </p>
+          </div>
+
+          <!-- Información de Contacto -->
+          <div class="contact-info">
+            <h3>Contacto sobre Cookies</h3>
+            <p>
+              Si tienes preguntas sobre esta política de cookies o sobre el uso
+              de cookies en nuestro sitio web, contáctanos:
+            </p>
+            <p>
+              <strong>JB Web Studio</strong><br />
+              Email:
+              <a href="mailto:jbwebstudiomde@gmail.com"
+                >jbwebstudiomde@gmail.com</a
+              ><br />
+              WhatsApp:
+              <a href="https://wa.link/j01359" target="_blank"
+                >+57 (318) 406-7067</a
+              ><br />
+              Sitio web: <a href="index.html">www.jbwebstudio.com</a>
+            </p>
+            <p>
+              Nos comprometemos a responder a tu consulta dentro de 3 días
+              hábiles.
+            </p>
+          </div>
+
+          <a href="index.html" class="back-to-home">
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path d="M19 12H5M12 19l-7-7 7-7" />
+            </svg>
+            Volver al Inicio
+          </a>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-bottom">
+        <div class="footer-bottom-content">
+          <div class="copyright">
+            <p>&copy; 2025 JB Web Studio. Todos los derechos reservados.</p>
+
+            <div class="legal-links">
+              <a href="privacidad.html" class="legal-link">Privacidad</a>
+              <a href="terminos.html" class="legal-link">Términos</a>
+              <a href="cookies.html" class="legal-link">Cookies</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script-simple.js"></script>
+  </body>
+</html>

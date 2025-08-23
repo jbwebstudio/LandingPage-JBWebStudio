@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Políticas de Privacidad - JB Web Studio</title>
+    <meta name="description" content="Políticas de privacidad de JB Web Studio. Conoce cómo protegemos y manejamos tu información personal.">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="images/logoSinFondo32px.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/logoSinFondo16px.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/logoSinFondo180px.png">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/components/navbar.css">
+    <link rel="stylesheet" href="css/components/footer.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    
+    <style>
+        /* Estilos específicos para la página de privacidad */
+        .privacy-page {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+            padding-top: 100px;
+        }
+        
+        .privacy-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px 60px;
+        }
+        
+        .privacy-header {
+            text-align: center;
+            margin-bottom: 50px;
+            padding: 40px 0;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .privacy-title {
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 16px;
+        }
+        
+        .privacy-subtitle {
+            font-size: 1.2rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+        
+        .privacy-content {
+            background: white;
+            border-radius: 20px;
+            padding: 50px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            line-height: 1.8;
+        }
+        
+        .privacy-section {
+            margin-bottom: 40px;
+        }
+        
+        .privacy-section h2 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--primary-light);
+        }
+        
+        .privacy-section h3 {
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin: 25px 0 15px;
+        }
+        
+        .privacy-section p {
+            color: var(--text-secondary);
+            margin-bottom: 16px;
+        }
+        
+        .privacy-section ul {
+            margin: 16px 0;
+            padding-left: 20px;
+        }
+        
+        .privacy-section li {
+            color: var(--text-secondary);
+            margin-bottom: 8px;
+        }
+        
+        .privacy-section strong {
+            color: var(--text-primary);
+            font-weight: 600;
+        }
+        
+        .contact-info {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            margin-top: 40px;
+        }
+        
+        .contact-info h3 {
+            color: white;
+            margin-bottom: 15px;
+        }
+        
+        .contact-info p {
+            color: rgba(255, 255, 255, 0.9);
+        }
+        
+        .contact-info a {
+            color: white;
+            text-decoration: underline;
+        }
+        
+        .back-to-home {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--gradient-primary);
+            color: white;
+            text-decoration: none;
+            padding: 12px 24px;
+            border-radius: 12px;
+            font-weight: 600;
+            margin-top: 30px;
+            transition: all 0.3s ease;
+        }
+        
+        .back-to-home:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(37, 99, 235, 0.3);
+            text-decoration: none;
+            color: white;
+        }
+        
+        @media (max-width: 768px) {
+            .privacy-content {
+                padding: 30px 20px;
+            }
+            
+            .privacy-header {
+                padding: 30px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">                
+            </div>
+            
+            <div class="nav-menu" id="nav-menu">
+                <a href="index.html" class="nav-link">Inicio</a>
+                <a href="index.html#servicios" class="nav-link">Servicios</a>
+                <a href="index.html#portafolio" class="nav-link">Portafolio</a>
+                <a href="index.html#contacto" class="nav-link">Contacto</a>
+            </div>
+            
+            <div class="nav-toggle" id="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Página de Privacidad -->
+    <main class="privacy-page">
+        <div class="privacy-container">
+            <!-- Header -->
+            <div class="privacy-header">
+                <h1 class="privacy-title">Políticas de Privacidad</h1>
+                <p class="privacy-subtitle">
+                    En JB Web Studio valoramos y protegemos tu privacidad. Esta política explica cómo recopilamos, usamos y protegemos tu información personal.
+                </p>
+                <p style="margin-top: 20px; font-size: 0.9rem; color: var(--text-light);">
+                    <strong>Última actualización:</strong> Enero 2025
+                </p>
+            </div>
+
+            <!-- Contenido -->
+            <div class="privacy-content">
+                <!-- 1. Información que Recopilamos -->
+                <div class="privacy-section">
+                    <h2>1. Información que Recopilamos</h2>
+                    
+                    <h3>Información Personal</h3>
+                    <p>Recopilamos información que nos proporcionas directamente cuando:</p>
+                    <ul>
+                        <li><strong>Completas formularios de contacto:</strong> nombre, email, teléfono, empresa y mensaje</li>
+                        <li><strong>Solicitas cotizaciones:</strong> detalles del proyecto, presupuesto y requisitos específicos</li>
+                        <li><strong>Te suscribes a nuestro newsletter:</strong> dirección de correo electrónico</li>
+                        <li><strong>Nos contactas por WhatsApp:</strong> número de teléfono y conversaciones</li>
+                    </ul>
+                    
+                    <h3>Información Técnica</h3>
+                    <p>Automáticamente recopilamos cierta información cuando visitas nuestro sitio web:</p>
+                    <ul>
+                        <li>Dirección IP y ubicación geográfica aproximada</li>
+                        <li>Tipo de navegador y sistema operativo</li>
+                        <li>Páginas visitadas y tiempo de permanencia</li>
+                        <li>Fuente de referencia (cómo llegaste a nuestro sitio)</li>
+                        <li>Información del dispositivo (móvil, tablet, desktop)</li>
+                    </ul>
+                </div>
+
+                <!-- 2. Cómo Usamos tu Información -->
+                <div class="privacy-section">
+                    <h2>2. Cómo Usamos tu Información</h2>
+                    
+                    <p>Utilizamos la información recopilada para:</p>
+                    <ul>
+                        <li><strong>Responder a tus consultas:</strong> contactarte sobre proyectos y servicios</li>
+                        <li><strong>Proporcionar cotizaciones:</strong> crear propuestas personalizadas para tus necesidades</li>
+                        <li><strong>Mejorar nuestros servicios:</strong> analizar el uso del sitio web y optimizar la experiencia</li>
+                        <li><strong>Comunicaciones de marketing:</strong> enviar newsletters y actualizaciones (solo con tu consentimiento)</li>
+                        <li><strong>Cumplimiento legal:</strong> cumplir con obligaciones legales y regulatorias</li>
+                        <li><strong>Seguridad:</strong> proteger nuestro sitio web y prevenir fraudes</li>
+                    </ul>
+                </div>
+
+                <!-- 3. Cookies y Tecnologías Similares -->
+                <div class="privacy-section">
+                    <h2>3. Cookies y Tecnologías Similares</h2>
+                    
+                    <h3>Tipos de Cookies que Utilizamos</h3>
+                    <ul>
+                        <li><strong>Cookies Esenciales:</strong> necesarias para el funcionamiento básico del sitio</li>
+                        <li><strong>Cookies de Rendimiento:</strong> nos ayudan a entender cómo interactúas con el sitio</li>
+                        <li><strong>Cookies de Funcionalidad:</strong> recuerdan tus preferencias y configuraciones</li>
+                        <li><strong>Cookies de Marketing:</strong> utilizadas para mostrar contenido relevante</li>
+                    </ul>
+                    
+                    <p>Puedes controlar las cookies a través de la configuración de tu navegador. Ten en cuenta que deshabilitar ciertas cookies puede afectar la funcionalidad del sitio.</p>
+                </div>
+
+                <!-- 4. Compartir Información -->
+                <div class="privacy-section">
+                    <h2>4. Compartir Información</h2>
+                    
+                    <p><strong>No vendemos, alquilamos ni compartimos tu información personal</strong> con terceros, excepto en las siguientes circunstancias:</p>
+                    
+                    <ul>
+                        <li><strong>Proveedores de servicios:</strong> empresas que nos ayudan a operar nuestro negocio (hosting, email marketing, analytics)</li>
+                        <li><strong>Cumplimiento legal:</strong> cuando sea requerido por ley o para proteger nuestros derechos</li>
+                        <li><strong>Consentimiento:</strong> cuando hayas dado tu consentimiento explícito</li>
+                        <li><strong>Transferencia de negocio:</strong> en caso de fusión, adquisición o venta de activos</li>
+                    </ul>
+                </div>
+
+                <!-- 5. Seguridad de Datos -->
+                <div class="privacy-section">
+                    <h2>5. Seguridad de Datos</h2>
+                    
+                    <p>Implementamos medidas de seguridad técnicas y organizativas para proteger tu información:</p>
+                    <ul>
+                        <li><strong>Encriptación SSL:</strong> todas las comunicaciones están encriptadas</li>
+                        <li><strong>Acceso restringido:</strong> solo personal autorizado tiene acceso a datos personales</li>
+                        <li><strong>Copias de seguridad:</strong> realizamos backups regulares y seguros</li>
+                        <li><strong>Actualizaciones de seguridad:</strong> mantenemos nuestros sistemas actualizados</li>
+                        <li><strong>Monitoreo:</strong> supervisamos continuamente posibles amenazas de seguridad</li>
+                    </ul>
+                </div>
+
+                <!-- 6. Tus Derechos -->
+                <div class="privacy-section">
+                    <h2>6. Tus Derechos</h2>
+                    
+                    <p>Tienes los siguientes derechos respecto a tu información personal:</p>
+                    <ul>
+                        <li><strong>Acceso:</strong> solicitar una copia de la información que tenemos sobre ti</li>
+                        <li><strong>Rectificación:</strong> corregir información inexacta o incompleta</li>
+                        <li><strong>Eliminación:</strong> solicitar la eliminación de tu información personal</li>
+                        <li><strong>Restricción:</strong> limitar el procesamiento de tu información</li>
+                        <li><strong>Portabilidad:</strong> recibir tu información en un formato estructurado</li>
+                        <li><strong>Oposición:</strong> oponerte al procesamiento de tu información para marketing</li>
+                        <li><strong>Retirar consentimiento:</strong> retirar tu consentimiento en cualquier momento</li>
+                    </ul>
+                    
+                    <p>Para ejercer estos derechos, contáctanos usando la información proporcionada al final de esta política.</p>
+                </div>
+
+                <!-- 7. Retención de Datos -->
+                <div class="privacy-section">
+                    <h2>7. Retención de Datos</h2>
+                    
+                    <p>Conservamos tu información personal solo durante el tiempo necesario para:</p>
+                    <ul>
+                        <li>Cumplir con los propósitos para los que fue recopilada</li>
+                        <li>Cumplir con obligaciones legales y regulatorias</li>
+                        <li>Resolver disputas y hacer cumplir nuestros acuerdos</li>
+                    </ul>
+                    
+                    <p><strong>Períodos de retención típicos:</strong></p>
+                    <ul>
+                        <li>Consultas de contacto: 3 años desde el último contacto</li>
+                        <li>Proyectos completados: 5 años para fines de garantía y soporte</li>
+                        <li>Datos de marketing: hasta que retires tu consentimiento</li>
+                        <li>Datos técnicos: 2 años para análisis y mejoras</li>
+                    </ul>
+                </div>
+
+                <!-- 8. Transferencias Internacionales -->
+                <div class="privacy-section">
+                    <h2>8. Transferencias Internacionales</h2>
+                    
+                    <p>Algunos de nuestros proveedores de servicios pueden estar ubicados fuera de tu país. Cuando transferimos información personal internacionalmente, nos aseguramos de que:</p>
+                    <ul>
+                        <li>El país de destino tenga un nivel adecuado de protección de datos</li>
+                        <li>Existan salvaguardas apropiadas (como cláusulas contractuales estándar)</li>
+                        <li>Se cumplan todas las regulaciones aplicables de protección de datos</li>
+                    </ul>
+                </div>
+
+                <!-- 9. Menores de Edad -->
+                <div class="privacy-section">
+                    <h2>9. Menores de Edad</h2>
+                    
+                    <p>Nuestros servicios están dirigidos a empresas y profesionales. No recopilamos intencionalmente información personal de menores de 18 años. Si descubrimos que hemos recopilado información de un menor, la eliminaremos inmediatamente.</p>
+                    
+                    <p>Si eres padre o tutor y crees que tu hijo nos ha proporcionado información personal, contáctanos inmediatamente.</p>
+                </div>
+
+                <!-- 10. Cambios en esta Política -->
+                <div class="privacy-section">
+                    <h2>10. Cambios en esta Política</h2>
+                    
+                    <p>Podemos actualizar esta política de privacidad ocasionalmente para reflejar cambios en nuestras prácticas o por razones legales. Te notificaremos sobre cambios significativos:</p>
+                    <ul>
+                        <li>Publicando la política actualizada en nuestro sitio web</li>
+                        <li>Enviando un email a los usuarios registrados</li>
+                        <li>Mostrando un aviso prominente en nuestro sitio</li>
+                    </ul>
+                    
+                    <p>Te recomendamos revisar esta política periódicamente para mantenerte informado sobre cómo protegemos tu información.</p>
+                </div>
+
+                <!-- 11. Base Legal -->
+                <div class="privacy-section">
+                    <h2>11. Base Legal para el Procesamiento</h2>
+                    
+                    <p>Procesamos tu información personal basándonos en:</p>
+                    <ul>
+                        <li><strong>Consentimiento:</strong> cuando has dado tu consentimiento explícito</li>
+                        <li><strong>Ejecución de contrato:</strong> para proporcionar los servicios solicitados</li>
+                        <li><strong>Interés legítimo:</strong> para mejorar nuestros servicios y comunicarnos contigo</li>
+                        <li><strong>Cumplimiento legal:</strong> para cumplir con obligaciones legales</li>
+                    </ul>
+                </div>
+
+                <!-- Información de Contacto -->
+                <div class="contact-info">
+                    <h3>Contacto para Asuntos de Privacidad</h3>
+                    <p>Si tienes preguntas sobre esta política de privacidad o quieres ejercer tus derechos, contáctanos:</p>
+                    <p>
+                        <strong>JB Web Studio</strong><br>
+                        Email: <a href="mailto:jbwebstudiomde@gmail.com">jbwebstudiomde@gmail.com</a><br>
+                        WhatsApp: <a href="https://wa.link/j01359" target="_blank">+57 (318) 406-7067</a><br>
+                        Sitio web: <a href="index.html">www.jbwebstudio.com</a>
+                    </p>
+                    <p>Nos comprometemos a responder a tu solicitud en 15 días.</p>
+                </div>
+
+                <a href="index.html" class="back-to-home">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M19 12H5M12 19l-7-7 7-7"/>
+                    </svg>
+                    Volver al Inicio
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-bottom">
+            <div class="footer-bottom-content">
+                <div class="copyright">
+                    <p>&copy; 2025 JB Web Studio. Todos los derechos reservados.</p>
+
+                    <div class="legal-links">
+                        <a href="privacidad.html" class="legal-link">Privacidad</a>
+                        <a href="terminos.html" class="legal-link">Términos</a>
+                        <a href="cookies.html" class="legal-link">Cookies</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script-simple.js"></script>
+</body>
+</html>
+
+    <style>
+        /* Estilos específicos para el footer negro */
+        .footer {
+            background: #000000 !important;
+            color: #ffffff;
+        }
+        
+        .footer-bottom {
+            background: #000000;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 25px 0;
+        }
+        
+        .footer-bottom-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .copyright {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        
+        .copyright p {
+            margin: 0;
+            font-size: var(--font-size-sm, 14px);
+            color: #ffffff;
+            font-family: var(--font-family, Arial, sans-serif);
+        }
+        
+        .legal-links {
+            display: flex;
+            gap: 20px;
+        }
+        
+        .legal-link {
+            color: #e2e8f0;
+            text-decoration: none;
+            font-size: var(--font-size-xs, 12px);
+            font-family: var(--font-family, Arial, sans-serif);
+            transition: color 0.3s ease;
+        }
+        
+        .legal-link:hover {
+            color: #ffffff;
+        }
+        
+        /* Responsive para el footer */
+        @media (max-width: 768px) {
+            .footer-bottom-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .legal-links {
+                justify-content: center;
+            }
+        }
+    </style>

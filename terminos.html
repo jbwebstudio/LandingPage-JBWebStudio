@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Términos y Condiciones - JB Web Studio</title>
+    <meta
+      name="description"
+      content="Términos y condiciones de JB Web Studio. Conoce las condiciones de uso de nuestros servicios de desarrollo web."
+    />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Favicon -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="images/logoSinFondo32px.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="images/logoSinFondo16px.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="images/logoSinFondo180px.png"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/variables.css" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/components/navbar.css" />
+    <link rel="stylesheet" href="css/components/footer.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+
+    <style>
+      /* Estilos específicos para la página de términos */
+      .terms-page {
+        min-height: 100vh;
+        background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+        padding-top: 100px;
+      }
+
+      .terms-container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 0 20px 60px;
+      }
+
+      .terms-header {
+        text-align: center;
+        margin-bottom: 50px;
+        padding: 40px 0;
+        background: white;
+        border-radius: 20px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      }
+
+      .terms-title {
+        font-size: clamp(2rem, 4vw, 3rem);
+        font-weight: 700;
+        color: var(--text-primary);
+        margin-bottom: 16px;
+      }
+
+      .terms-subtitle {
+        font-size: 1.1rem;
+        color: var(--text-secondary);
+        margin: 0;
+        font-weight: 400;
+      }
+
+      .terms-content {
+        background: white;
+        border-radius: 20px;
+        padding: 40px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        margin-bottom: 30px;
+      }
+
+      .terms-section {
+        margin-bottom: 40px;
+        padding-bottom: 30px;
+        border-bottom: 1px solid #e2e8f0;
+      }
+
+      .terms-section:last-child {
+        border-bottom: none;
+        margin-bottom: 0;
+        padding-bottom: 0;
+      }
+
+      .terms-section h2 {
+        color: var(--primary-color);
+        font-size: 1.5rem;
+        font-weight: 600;
+        margin-bottom: 20px;
+        padding-bottom: 10px;
+        border-bottom: 2px solid var(--primary-color);
+        display: inline-block;
+      }
+
+      .terms-section h3 {
+        color: var(--text-primary);
+        font-size: 1.2rem;
+        font-weight: 600;
+        margin: 25px 0 15px 0;
+      }
+
+      .terms-section p {
+        color: var(--text-secondary);
+        line-height: 1.7;
+        margin-bottom: 16px;
+        font-size: 1rem;
+      }
+
+      .terms-section ul {
+        color: var(--text-secondary);
+        line-height: 1.7;
+        margin: 16px 0;
+        padding-left: 20px;
+      }
+
+      .terms-section li {
+        margin-bottom: 8px;
+      }
+
+      .terms-section strong {
+        color: var(--text-primary);
+        font-weight: 600;
+      }
+
+      .contact-info {
+        background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
+        padding: 30px;
+        border-radius: 15px;
+        margin-top: 30px;
+        text-align: center;
+      }
+
+      .contact-info h3 {
+        color: var(--primary-color);
+        margin-bottom: 15px;
+        font-size: 1.3rem;
+      }
+
+      .contact-info p {
+        margin-bottom: 10px;
+      }
+
+      .contact-info a {
+        color: var(--primary-color);
+        text-decoration: none;
+        font-weight: 500;
+      }
+
+      .contact-info a:hover {
+        text-decoration: underline;
+      }
+
+      .back-to-home {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        color: var(--primary-color);
+        text-decoration: none;
+        font-weight: 500;
+        padding: 12px 24px;
+        border: 2px solid var(--primary-color);
+        border-radius: 10px;
+        transition: all 0.3s ease;
+        margin-top: 20px;
+      }
+
+      .back-to-home:hover {
+        background: var(--primary-color);
+        color: white;
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(37, 99, 235, 0.3);
+      }
+
+      .highlight-box {
+        background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+        border-left: 4px solid #f59e0b;
+        padding: 20px;
+        border-radius: 8px;
+        margin: 20px 0;
+      }
+
+      .highlight-box p {
+        margin: 0;
+        color: #92400e;
+        font-weight: 500;
+      }
+
+      /* Estilos específicos para el footer negro */
+      .footer {
+        background: #000000 !important;
+        color: #ffffff;
+      }
+
+      .footer-bottom {
+        background: #000000;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        padding: 25px 0;
+      }
+
+      .footer-bottom-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 20px;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+
+      .copyright {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+      }
+
+      .copyright p {
+        margin: 0;
+        font-size: var(--font-size-sm, 14px);
+        color: #ffffff;
+        font-family: var(--font-family, Arial, sans-serif);
+      }
+
+      .legal-links {
+        display: flex;
+        gap: 20px;
+      }
+
+      .legal-link {
+        color: #e2e8f0;
+        text-decoration: none;
+        font-size: var(--font-size-xs, 12px);
+        font-family: var(--font-family, Arial, sans-serif);
+        transition: color 0.3s ease;
+      }
+
+      .legal-link:hover {
+        color: #ffffff;
+      }
+
+      /* Responsive */
+      @media (max-width: 768px) {
+        .terms-content {
+          padding: 25px;
+        }
+
+        .terms-section h2 {
+          font-size: 1.3rem;
+        }
+
+        .footer-bottom-content {
+          flex-direction: column;
+          text-align: center;
+        }
+
+        .legal-links {
+          justify-content: center;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .terms-content {
+          padding: 20px;
+        }
+
+        .terms-section h2 {
+          font-size: 1.2rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <div class="nav-logo">          
+        </div>
+
+        <div class="nav-menu">
+          <a href="index.html#inicio" class="nav-link">Inicio</a>
+          <a href="index.html#servicios" class="nav-link">Servicios</a>
+          <a href="index.html#portfolio" class="nav-link">Portfolio</a>
+          <a href="index.html#contacto" class="nav-link">Contacto</a>
+        </div>
+
+        <div class="nav-toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="terms-page">
+      <div class="terms-container">
+        <!-- Header -->
+        <div class="terms-header">
+          <h1 class="terms-title">Términos y Condiciones</h1>
+          <p class="terms-subtitle">
+            Condiciones de uso de los servicios de JB Web Studio
+          </p>
+          <p
+            style="
+              margin-top: 15px;
+              color: var(--text-secondary);
+              font-size: 0.9rem;
+            "
+          >
+            Última actualización: 15 de enero de 2025
+          </p>
+        </div>
+
+        <!-- Content -->
+        <div class="terms-content">
+          <!-- 1. Aceptación de Términos -->
+          <div class="terms-section">
+            <h2>1. Aceptación de Términos</h2>
+
+            <p>
+              Al acceder y utilizar los servicios de
+              <strong>JB Web Studio</strong>, usted acepta estar sujeto a estos
+              términos y condiciones de uso. Si no está de acuerdo con alguna
+              parte de estos términos, no debe utilizar nuestros servicios.
+            </p>
+
+            <p>
+              Estos términos constituyen un acuerdo legal vinculante entre usted
+              y JB Web Studio. Nos reservamos el derecho de modificar estos
+              términos en cualquier momento, y dichas modificaciones entrarán en
+              vigor inmediatamente después de su publicación en nuestro sitio
+              web.
+            </p>
+
+            <div class="highlight-box">
+              <p>
+                <strong>Importante:</strong> El uso continuado de nuestros
+                servicios después de cualquier modificación constituye su
+                aceptación de los nuevos términos.
+              </p>
+            </div>
+          </div>
+
+          <!-- 2. Descripción de Servicios -->
+          <div class="terms-section">
+            <h2>2. Descripción de Servicios</h2>
+
+            <p>
+              JB Web Studio ofrece servicios profesionales de desarrollo web,
+              incluyendo pero no limitándose a:
+            </p>
+
+            <ul>
+              <li>
+                <strong>Desarrollo de sitios web:</strong> Creación de sitios
+                web personalizados y responsivos
+              </li>
+              <li>
+                <strong>Diseño web:</strong> Diseño de interfaces de usuario
+                atractivas y funcionales
+              </li>
+              <li>
+                <strong>Optimización SEO:</strong> Mejora del posicionamiento en
+                motores de búsqueda
+              </li>
+              <li>
+                <strong>Mantenimiento web:</strong> Servicios de actualización y
+                mantenimiento continuo
+              </li>
+              <li>
+                <strong>Consultoría digital:</strong> Asesoramiento en
+                estrategias digitales
+              </li>
+              <li>
+                <strong>Hosting y dominio:</strong> Gestión de alojamiento web y
+                registro de dominios
+              </li>
+            </ul>
+
+            <p>
+              Nos reservamos el derecho de modificar, suspender o discontinuar
+              cualquier servicio en cualquier momento sin previo aviso.
+            </p>
+          </div>
+
+          <!-- 3. Proceso de Contratación -->
+          <div class="terms-section">
+            <h2>3. Proceso de Contratación y Pagos</h2>
+
+            <h3>3.1 Cotizaciones y Propuestas</h3>
+            <p>
+              Todas las cotizaciones son válidas por un período de 30 días desde
+              su emisión. Los precios pueden variar según la complejidad del
+              proyecto y los requerimientos específicos del cliente.
+            </p>
+
+            <h3>3.2 Modalidades de Pago</h3>
+            <ul>
+              <li>
+                <strong>Pago inicial:</strong> Se requiere un anticipo del 50%
+                para iniciar cualquier proyecto
+              </li>
+              <li>
+                <strong>Pago final:</strong> El 50% restante se abona al
+                completar y entregar el proyecto
+              </li>
+              <li>
+                <strong>Proyectos grandes:</strong> Pueden dividirse en hitos
+                con pagos parciales
+              </li>
+              <li>
+                <strong>Servicios recurrentes:</strong> Se facturan mensualmente
+                por adelantado
+              </li>
+            </ul>
+
+            <h3>3.3 Métodos de Pago Aceptados</h3>
+            <p>
+              Aceptamos pagos mediante transferencia bancaria, PSE, Nequi,
+              Daviplata y otros métodos digitales disponibles en Colombia.
+            </p>
+          </div>
+
+          <!-- 4. Obligaciones del Cliente -->
+          <div class="terms-section">
+            <h2>4. Obligaciones del Cliente</h2>
+
+            <p>El cliente se compromete a:</p>
+
+            <ul>
+              <li>
+                <strong>Proporcionar información:</strong> Suministrar toda la
+                información, contenido y materiales necesarios para el
+                desarrollo del proyecto
+              </li>
+              <li>
+                <strong>Comunicación oportuna:</strong> Responder a consultas y
+                solicitudes de información en un plazo razonable
+              </li>
+              <li>
+                <strong>Revisiones y aprobaciones:</strong> Revisar y aprobar
+                las entregas en los tiempos establecidos
+              </li>
+              <li>
+                <strong>Pagos puntuales:</strong> Realizar los pagos según los
+                términos acordados
+              </li>
+              <li>
+                <strong>Contenido legal:</strong> Garantizar que todo el
+                contenido proporcionado es legal y no infringe derechos de
+                terceros
+              </li>
+              <li>
+                <strong>Accesos necesarios:</strong> Proporcionar accesos a
+                hosting, dominios y plataformas cuando sea requerido
+              </li>
+            </ul>
+
+            <p>
+              El incumplimiento de estas obligaciones puede resultar en retrasos
+              del proyecto o costos adicionales.
+            </p>
+          </div>
+
+          <!-- 5. Derechos de Propiedad Intelectual -->
+          <div class="terms-section">
+            <h2>5. Derechos de Propiedad Intelectual</h2>
+
+            <h3>5.1 Propiedad del Cliente</h3>
+            <p>
+              Una vez completado el pago total del proyecto, el cliente obtiene
+              la propiedad del código fuente y diseños desarrollados
+              específicamente para su proyecto.
+            </p>
+
+            <h3>5.2 Propiedad de JB Web Studio</h3>
+            <p>JB Web Studio retiene los derechos sobre:</p>
+            <ul>
+              <li>Metodologías y procesos de desarrollo propios</li>
+              <li>Herramientas y frameworks desarrollados internamente</li>
+              <li>Conocimientos técnicos y experiencia adquirida</li>
+              <li>
+                Derecho a utilizar el proyecto como referencia en nuestro
+                portfolio
+              </li>
+            </ul>
+
+            <h3>5.3 Licencias de Terceros</h3>
+            <p>
+              Algunos proyectos pueden incluir software, plugins o recursos de
+              terceros sujetos a sus propias licencias. El cliente es
+              responsable de cumplir con dichas licencias.
+            </p>
+          </div>
+
+          <!-- 6. Garantías y Limitaciones -->
+          <div class="terms-section">
+            <h2>6. Garantías y Limitaciones</h2>
+
+            <h3>6.1 Garantía de Calidad</h3>
+            <p>
+              Garantizamos que nuestros servicios se realizarán con estándares
+              profesionales de la industria. Ofrecemos un período de garantía de
+              30 días para corrección de errores después de la entrega final.
+            </p>
+
+            <h3>6.2 Limitaciones de Garantía</h3>
+            <p>No garantizamos:</p>
+            <ul>
+              <li>Resultados específicos de marketing o ventas</li>
+              <li>Posicionamiento específico en motores de búsqueda</li>
+              <li>Funcionamiento en navegadores obsoletos o no estándar</li>
+              <li>Compatibilidad con modificaciones realizadas por terceros</li>
+            </ul>
+
+            <h3>6.3 Limitación de Responsabilidad</h3>
+            <p>
+              Nuestra responsabilidad se limita al valor total pagado por el
+              cliente por los servicios específicos que dieron lugar al reclamo.
+            </p>
+          </div>
+
+          <!-- 7. Plazos de Entrega -->
+          <div class="terms-section">
+            <h2>7. Plazos de Entrega</h2>
+
+            <p>
+              Los plazos de entrega se establecen como estimaciones basadas en
+              la información disponible al momento de la cotización. Los plazos
+              pueden verse afectados por:
+            </p>
+
+            <ul>
+              <li>
+                Retrasos en la entrega de contenido o información por parte del
+                cliente
+              </li>
+              <li>Cambios en el alcance del proyecto</li>
+              <li>Solicitudes de revisiones adicionales</li>
+              <li>Circunstancias imprevistas o de fuerza mayor</li>
+            </ul>
+
+            <p>
+              Nos comprometemos a comunicar cualquier retraso potencial tan
+              pronto como sea identificado y a trabajar con el cliente para
+              minimizar el impacto.
+            </p>
+          </div>
+
+          <!-- 8. Modificaciones y Cambios -->
+          <div class="terms-section">
+            <h2>8. Modificaciones y Cambios</h2>
+
+            <h3>8.1 Cambios en el Alcance</h3>
+            <p>
+              Cualquier modificación al alcance original del proyecto debe ser
+              aprobada por escrito por ambas partes y puede resultar en ajustes
+              de precio y cronograma.
+            </p>
+
+            <h3>8.2 Revisiones Incluidas</h3>
+            <p>
+              Cada proyecto incluye un número específico de rondas de revisión
+              según lo acordado en la propuesta. Revisiones adicionales se
+              cobrarán por separado.
+            </p>
+
+            <h3>8.3 Cambios Urgentes</h3>
+            <p>
+              Los cambios solicitados con carácter urgente pueden incurrir en
+              costos adicionales del 50% sobre la tarifa normal.
+            </p>
+          </div>
+
+          <!-- 9. Cancelación y Terminación -->
+          <div class="terms-section">
+            <h2>9. Cancelación y Terminación</h2>
+
+            <h3>9.1 Cancelación por el Cliente</h3>
+            <p>
+              El cliente puede cancelar el proyecto en cualquier momento. En
+              caso de cancelación:
+            </p>
+            <ul>
+              <li>
+                Se facturará el trabajo completado hasta la fecha de cancelación
+              </li>
+              <li>Los pagos realizados no son reembolsables</li>
+              <li>Se entregará el trabajo completado hasta ese momento</li>
+            </ul>
+
+            <h3>9.2 Terminación por JB Web Studio</h3>
+            <p>Nos reservamos el derecho de terminar el contrato en caso de:</p>
+            <ul>
+              <li>Incumplimiento de pago por parte del cliente</li>
+              <li>Falta de cooperación o comunicación del cliente</li>
+              <li>Solicitudes que violen términos legales o éticos</li>
+            </ul>
+          </div>
+
+          <!-- 10. Confidencialidad -->
+          <div class="terms-section">
+            <h2>10. Confidencialidad</h2>
+
+            <p>
+              JB Web Studio se compromete a mantener la confidencialidad de toda
+              la información proporcionada por el cliente durante el desarrollo
+              del proyecto.
+            </p>
+
+            <p>Esta obligación incluye:</p>
+            <ul>
+              <li>Información comercial y estratégica</li>
+              <li>Datos técnicos y operativos</li>
+              <li>Información financiera</li>
+              <li>Cualquier información marcada como confidencial</li>
+            </ul>
+
+            <p>
+              La obligación de confidencialidad permanece vigente incluso
+              después de la finalización del proyecto.
+            </p>
+          </div>
+
+          <!-- 11. Fuerza Mayor -->
+          <div class="terms-section">
+            <h2>11. Fuerza Mayor</h2>
+
+            <p>
+              No seremos responsables por retrasos o incumplimientos causados
+              por circunstancias fuera de nuestro control razonable, incluyendo
+              pero no limitándose a:
+            </p>
+
+            <ul>
+              <li>Desastres naturales</li>
+              <li>Conflictos laborales</li>
+              <li>Fallas en servicios de terceros (hosting, internet, etc.)</li>
+              <li>Cambios en regulaciones gubernamentales</li>
+              <li>Pandemias o emergencias sanitarias</li>
+            </ul>
+          </div>
+
+          <!-- 12. Ley Aplicable -->
+          <div class="terms-section">
+            <h2>12. Ley Aplicable y Jurisdicción</h2>
+
+            <p>
+              Estos términos se rigen por las leyes de la República de Colombia.
+              Cualquier disputa será resuelta en primera instancia mediante
+              negociación directa entre las partes.
+            </p>
+
+            <p>
+              En caso de no llegar a un acuerdo, las disputas serán sometidas a
+              la jurisdicción de los tribunales competentes de Medellín,
+              Colombia.
+            </p>
+          </div>
+
+          <!-- 13. Disposiciones Generales -->
+          <div class="terms-section">
+            <h2>13. Disposiciones Generales</h2>
+
+            <h3>13.1 Integridad del Acuerdo</h3>
+            <p>
+              Estos términos, junto con la propuesta comercial específica,
+              constituyen el acuerdo completo entre las partes.
+            </p>
+
+            <h3>13.2 Separabilidad</h3>
+            <p>
+              Si alguna disposición de estos términos se considera inválida, el
+              resto del acuerdo permanecerá en pleno vigor.
+            </p>
+
+            <h3>13.3 Comunicaciones</h3>
+            <p>
+              Todas las comunicaciones oficiales deben realizarse por escrito a
+              través de los canales establecidos.
+            </p>
+
+            <h3>13.4 Idioma</h3>
+            <p>
+              En caso de conflicto entre versiones en diferentes idiomas,
+              prevalecerá la versión en español.
+            </p>
+          </div>
+
+          <!-- Información de Contacto -->
+          <div class="contact-info">
+            <h3>Contacto para Asuntos Legales</h3>
+            <p>
+              Para consultas sobre estos términos y condiciones, contáctanos:
+            </p>
+            <p>
+              <strong>JB Web Studio</strong><br />
+              Email:
+              <a href="mailto:jbwebstudiomde@gmail.com"
+                >jbwebstudiomde@gmail.com</a
+              ><br />
+              WhatsApp:
+              <a href="https://wa.link/j01359" target="_blank"
+                >+57 (318) 406-7067</a
+              ><br />
+              Sitio web: <a href="index.html">www.jbwebstudio.com</a>
+            </p>
+            <p>
+              Nos comprometemos a responder a tu consulta dentro de 3 días
+              hábiles.
+            </p>
+          </div>
+
+          <a href="index.html" class="back-to-home">
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path d="M19 12H5M12 19l-7-7 7-7" />
+            </svg>
+            Volver al Inicio
+          </a>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-bottom">
+        <div class="footer-bottom-content">
+          <div class="copyright">
+            <p>&copy; 2025 JB Web Studio. Todos los derechos reservados.</p>
+
+            <div class="legal-links">
+              <a href="privacidad.html" class="legal-link">Privacidad</a>
+              <a href="terminos.html" class="legal-link">Términos</a>
+              <a href="cookies.html" class="legal-link">Cookies</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script-simple.js"></script>
+  </body>
+</html>
