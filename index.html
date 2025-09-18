@@ -68,48 +68,49 @@
     <!-- Form Enhancements CSS -->
     <link rel="stylesheet" href="css/components/form-enhancements.css">
     
+    <link rel="stylesheet" href="css/components/whatsapp-float.css">
     <!-- Structured Data (JSON-LD) -->
     <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Jorge Blanco",
-        "jobTitle": "Diseñador y Desarrollador Web",
-        "description": "Especialista en desarrollo web moderno, landing pages responsivas y rápidas, tiendas online listas para vender.",
-        "url": "https://jbwebstudio.com.co",
-        "sameAs": [
-            "https://www.facebook.com/jbwebstudiomde",
-            "https://www.instagram.com/jbweb.studio/",
-            "https://www.linkedin.com/in/jbwebstudio/",
-        ],
-        "knowsAbout": [
-            "Desarrollo Web",
-            "Diseño Web",
-            "Landing Pages",
-            "Tiendas Online",
-            "Ecommerce",
-            "HTML",
-            "CSS",
-            "JavaScript",
-            "SEO"
-            "Diseño Responsivo"
-        ],
-        "offers": {
-            "@type": "Service",
-            "serviceType": "Servicios Freelance",
-            "description": "Diseño Web Profesional, Landing Pages optimizadas, Páginas WEB modernas, responsivas y rápidas, Tiendas Online listas para vender.",
-            "provider": {
-                "@type": "Person",
-                "name": "Jorge Blanco"
-            }
-        },
-        "contactPoint": {
-            "@type": "ContactPoint",
-            "contactType": "customer service",
-            "availableLanguage": ["Spanish"]
+{
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Jorge Blanco",
+    "jobTitle": "Diseñador y Desarrollador Web",
+    "description": "Especialista en desarrollo web moderno, landing pages responsivas y rápidas, tiendas online listas para vender.",
+    "url": "https://jbwebstudio.com.co",
+    "sameAs": [
+        "https://www.facebook.com/jbwebstudiomde",
+        "https://www.instagram.com/jbweb.studio/",
+        "https://www.linkedin.com/in/jbwebstudio/"
+    ],
+    "knowsAbout": [
+        "Desarrollo Web",
+        "Diseño Web",
+        "Landing Pages",
+        "Tiendas Online",
+        "Ecommerce",
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "SEO",
+        "Diseño Responsivo"
+    ],
+    "offers": {
+        "@type": "Service",
+        "serviceType": "Servicios Freelance",
+        "description": "Diseño Web Profesional, Landing Pages optimizadas, Páginas WEB modernas, responsivas y rápidas, Tiendas Online listas para vender.",
+        "provider": {
+            "@type": "Person",
+            "name": "Jorge Blanco"
         }
+    },
+    "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "customer service",
+        "availableLanguage": ["Spanish"]
     }
-    </script>
+}
+</script>
     
     <!-- Breadcrumb Schema -->
     <script type="application/ld+json">
@@ -167,6 +168,45 @@
       "priceRange": "$$"
     }
     </script>
+    
+    <!-- Facebook Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '2620305918330424');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none" alt="fb pixel"
+    src="https://www.facebook.com/tr?id=2620305918330424&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Facebook Pixel Code -->
+
+    <!-- Microsoft Clarity Code -->
+    <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "t0fulii13u");
+</script>
+    <!-- End of Microsoft Clarity Code -->    
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-NZFEFGQL8Y"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-NZFEFGQL8Y');
+</script>
+<!-- End of Google tag (gtag.js) -->
 </head>
 <body>
     <!-- Navigation -->
@@ -193,6 +233,12 @@
                 <li class="nav-item" role="none">
                     <a href="#servicios" class="nav-link" role="menuitem" data-section="servicios">
                         <span class="nav-text">Servicios</span>
+                        <span class="nav-indicator"></span>
+                    </a>
+                </li>
+                <li class="nav-item" role="none">
+                    <a href="servicios-avanzados.html" class="nav-link" role="menuitem">
+                        <span class="nav-text">Automatizaciones</span>
                         <span class="nav-indicator"></span>
                     </a>
                 </li>
@@ -285,6 +331,13 @@
                 </a>
             </li>
             <li class="mobile-nav-item" role="none">
+                    <a href="servicios-avanzados.html" class="mobile-nav-link" role="menuitem"
+                    data-section="servicios-avanzados">
+                        <i class="fas fa-robot"></i>
+                        <span>Automatizaciones</span>
+                    </a>
+                </li>
+            <li class="mobile-nav-item" role="none">
                 <a href="#proceso" class="mobile-nav-link" role="menuitem" data-section="proceso">
                     <i class="fas fa-cogs"></i>
                     <span>Proceso</span>
@@ -318,7 +371,7 @@
     </div>
 
     <!-- Hero Section Premium -->
-    <section class="hero" id="inicio">
+    <section class="hero" id="inicio" style="background-image: linear-gradient(135deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0.7) 100%), url('images/fondoHero.webp'); background-size: cover; background-position: center; background-repeat: no-repeat; background-attachment: fixed;">
         <!-- Efectos de Fondo Avanzados -->
         <div class="hero-background">
             <div class="bg-particles"></div>
@@ -332,9 +385,14 @@
         </div>
 
         <div class="hero-container">
+            <!-- Logo animado -->
+            <div class="hero-logo" data-aos="fade-up" data-aos-delay="100">
+                <img src="images/logoSinFondo.png" alt="JB WEB Studio Logo" class="hero-logo-image">
+            </div>
+            
             <div class="hero-content">
                 <!-- Badge de Disponibilidad Premium -->
-                <div class="hero-badge premium" data-aos="fade-up" data-aos-delay="100">
+                <div class="hero-badge premium" data-aos="fade-up" data-aos-delay="200">
                     <span class="badge-dot pulsing"></span>
                     <i class="fas fa-star"></i>
                     <span>Freelancer Premium • Disponible</span>
@@ -342,7 +400,7 @@
                 </div>
 
                 <!-- Título Principal Mejorado -->
-                <h1 class="hero-title enhanced" data-aos="fade-up" data-aos-delay="200">
+                <h1 class="hero-title enhanced" data-aos="fade-up" data-aos-delay="300">
                     Transformo tus 
                     <span class="title-highlight">
                         <span class="highlight-text">ideas digitales</span>
@@ -362,7 +420,7 @@
 
                 <!-- CTAs Premium -->
                 <div class="hero-cta enhanced" data-aos="fade-up" data-aos-delay="400">
-                    <a href="#contacto" class="btn btn-primary btn-xl btn-glow">
+                    <a href="#contacto" class="btn btn-outline btn-xl">
                         <span class="btn-content">
                             <i class="fas fa-rocket"></i>
                             <span class="btn-text">Comenzar mi proyecto</span>
@@ -652,70 +710,163 @@
 </section>
 
     <!-- Cómo trabajo contigo -->
-    <section class="proceso" id="proceso">
+    <section class="proceso" id="proceso" style="background-image: linear-gradient(135deg, rgba(15, 23, 42, 0.75) 0%, rgba(30, 41, 59, 0.7) 50%, rgba(15, 23, 42, 0.75) 100%), url('images/comoLoHago.webp'); background-size: cover; background-position: center; background-repeat: no-repeat; background-attachment: fixed;">
+        <!-- Efectos de Fondo Avanzados -->
+        <div class="proceso-background">
+            <div class="proceso-particles"></div>
+            <div class="proceso-gradient-overlay"></div>
+            <div class="proceso-geometric-shapes">
+                <div class="shape shape-1"></div>
+                <div class="shape shape-2"></div>
+                <div class="shape shape-3"></div>
+                <div class="shape shape-4"></div>
+            </div>
+        </div>        
         <div class="container">
-            <div class="proceso-header">
-                <span class="proceso-badge">MI PROCESO</span>
+            <div class="proceso-header" data-aos="fade-up">
+                <div class="proceso-badge-container">
+                    <span class="proceso-badge">
+                        <i class="fas fa-cogs proceso-badge-icon"></i>
+                        MI PROCESO
+                        <span class="badge-glow"></span>
+                    </span>
+                </div>
                 <h2>Cómo trabajo <span class="highlight">contigo</span></h2>
                 <p class="proceso-subtitle">Un proceso transparente y eficiente para garantizar resultados excepcionales</p>
-            </div>
-            
+                
+                <!-- Estadísticas del Proceso -->
+                <div class="proceso-stats" data-aos="fade-up" data-aos-delay="200">
+                    <div class="stat-item">
+                        <span class="stat-number">4</span>
+                        <span class="stat-label" style="color: white;">Pasos Claros</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">100%</span>
+                        <span class="stat-label" style="color: white;">Transparencia</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">24/7</span>
+                        <span class="stat-label" style="color: white;">Comunicación</span>
+                    </div>
+                </div>
+            </div>            
             <div class="proceso-timeline">
-                <div class="proceso-step" data-step="01">
-                    <div class="step-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M9 12L11 14L15 10M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
+                <div class="timeline-progress"></div>
+                
+                <div class="proceso-step" data-step="01" data-aos="fade-right" data-aos-delay="300">
+                    <div class="step-icon-container">
+                        <div class="step-icon">
+                            <div class="icon-background"></div>
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M8 12L10.5 14.5L16 9M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12Z" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <div class="icon-pulse"></div>
+                        </div>                        
                     </div>
                     <div class="step-content">
-                        <h3>Consulta inicial</h3>
-                        <p>Analizamos tus necesidades y objetivos específicos para entender perfectamente tu visión.</p>
+                        <div class="step-badge" style="color: white;">Paso 1</div>
+                        <h3 style="color: white;">Consulta Inicial Estratégica</h3>
+                        <p style="color: white;">Realizamos un análisis profundo de tus necesidades, objetivos de negocio y audiencia objetivo para crear una estrategia personalizada que maximice el impacto de tu proyecto digital.</p>
+                        <div class="step-features">
+                            <span class="feature-tag"><i class="fas fa-check"></i> Análisis de mercado</span>
+                            <span class="feature-tag"><i class="fas fa-check"></i> Definición de objetivos</span>
+                            <span class="feature-tag"><i class="fas fa-check"></i> Estrategia UX/UI</span>
+                        </div>
                     </div>
-                    <div class="step-number">01</div>
+                    <div class="step-number">
+                        <span class="number-text">01</span>
+                        <div class="number-glow"></div>
+                    </div>
+                </div>                
+                <div class="proceso-step" data-step="02" data-aos="fade-left" data-aos-delay="500">
+                    <div class="step-icon-container">
+                        <div class="step-icon">
+                            <div class="icon-background"></div>
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9 5H7C5.89543 5 5 5.89543 5 7V19C5 20.1046 5.89543 21 7 21H17C18.1046 21 19 20.1046 19 19V7C19 5.89543 18.1046 5 17 5H15M9 5C9 6.10457 9.89543 7 11 7H13C14.1046 7 15 6.10457 15 5M9 5C9 3.89543 9.89543 3 11 3H13C14.1046 3 15 3.89543 15 5M12 12H15M12 16H15M9 12H9.01M9 16H9.01" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <div class="icon-pulse"></div>
+                        </div>                        
+                    </div>
+                    <div class="step-content">
+                        <div class="step-badge" style="color: white;">Paso 2</div>
+                        <h3 style="color: white;">Propuesta Técnica Detallada</h3>
+                        <p style="color: white;">Desarrollo una propuesta técnica completa con arquitectura del proyecto, cronograma detallado, presupuesto transparente y especificaciones técnicas adaptadas a tus necesidades específicas.</p>
+                        <div class="step-features">
+                            <span class="feature-tag"><i class="fas fa-check"></i> Arquitectura técnica</span>
+                            <span class="feature-tag"><i class="fas fa-check"></i> Cronograma detallado</span>
+                            <span class="feature-tag"><i class="fas fa-check"></i> Presupuesto claro</span>
+                        </div>
+                    </div>
+                    <div class="step-number">
+                        <span class="number-text">02</span>
+                        <div class="number-glow"></div>
+                    </div>
+                </div>                
+                <div class="proceso-step" data-step="03" data-aos="fade-right" data-aos-delay="700">
+                    <div class="step-icon-container">
+                        <div class="step-icon">
+                            <div class="icon-background"></div>
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10 20L14 4M18 8L22 12L18 16M6 16L2 12L6 8" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <div class="icon-pulse"></div>
+                        </div>                        
+                    </div>
+                    <div class="step-content">
+                        <div class="step-badge" style="color: white;">Paso 3</div>
+                        <h3 style="color: white;">Desarrollo Ágil y Comunicación</h3>
+                        <p style="color: white;">Implemento tu proyecto utilizando metodologías ágiles con entregas parciales, revisiones constantes y comunicación transparente para asegurar que el resultado supere tus expectativas.</p>
+                        <div class="step-features">
+                            <span class="feature-tag"><i class="fas fa-check"></i> Metodología ágil</span>
+                            <span class="feature-tag"><i class="fas fa-check"></i> Entregas parciales</span>
+                            <span class="feature-tag"><i class="fas fa-check"></i> Feedback continuo</span>
+                        </div>
+                    </div>
+                    <div class="step-number">
+                        <span class="number-text">03</span>
+                        <div class="number-glow"></div>
+                    </div>
                 </div>
                 
-                <div class="proceso-step" data-step="02">
-                    <div class="step-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M9 5H7C5.89543 5 5 5.89543 5 7V19C5 20.1046 5.89543 21 7 21H17C18.1046 21 19 20.1046 19 19V7C19 5.89543 18.1046 5 17 5H15M9 5C9 6.10457 9.89543 7 11 7H13C14.1046 7 15 6.10457 15 5M9 5C9 3.89543 9.89543 3 11 3H13C14.1046 3 15 3.89543 15 5M12 12H15M12 16H15M9 12H9.01M9 16H9.01" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
+                <div class="proceso-step" data-step="04" data-aos="fade-left" data-aos-delay="900">
+                    <div class="step-icon-container">
+                        <div class="step-icon">
+                            <div class="icon-background"></div>
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9 11L12 14L22 4M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <div class="icon-pulse"></div>
+                        </div>
                     </div>
                     <div class="step-content">
-                        <h3>Propuesta personalizada</h3>
-                        <p>Creo una solución a medida con tiempos y costos claros, adaptada a tu presupuesto.</p>
+                        <div class="step-badge" style="color: white;">Paso 4</div>
+                        <h3 style="color: white;">Entrega Premium y Soporte</h3>
+                        <p style="color: white;">Entrego tu proyecto optimizado con documentación completa, capacitación personalizada y soporte técnico extendido para garantizar el éxito continuo de tu inversión digital.</p>
+                        <div class="step-features">
+                            <span class="feature-tag"><i class="fas fa-check"></i> Optimización completa</span>
+                            <span class="feature-tag"><i class="fas fa-check"></i> Documentación técnica</span>
+                            <span class="feature-tag"><i class="fas fa-check"></i> Soporte extendido</span>
+                        </div>
                     </div>
-                    <div class="step-number">02</div>
-                </div>
-                
-                <div class="proceso-step" data-step="03">
-                    <div class="step-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M7 8H17M7 12H17M7 16H17M3 5C3 3.89543 3.89543 3 5 3H19C20.1046 3 21 3.89543 21 5V19C21 20.1046 20.1046 21 19 21H5C3.89543 21 3 20.1046 3 19V5Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
+                    <div class="step-number">
+                        <span class="number-text">04</span>
+                        <div class="number-glow"></div>
                     </div>
-                    <div class="step-content">
-                        <h3>Desarrollo y comunicación</h3>
-                        <p>Trabajo en tu proyecto manteniéndote informado del progreso en cada etapa.</p>
-                    </div>
-                    <div class="step-number">03</div>
-                </div>
-                
-                <div class="proceso-step" data-step="04">
-                    <div class="step-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M9 12L11 14L15 10M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </div>
-                    <div class="step-content">
-                        <h3>Entrega y soporte</h3>
-                        <p>Entrego el proyecto finalizado con soporte post-entrega para garantizar tu satisfacción.</p>
-                    </div>
-                    <div class="step-number">04</div>
                 </div>
             </div>
             
-            <div class="proceso-cta">
-                <a href="#contacto" class="btn-proceso">Comenzar mi proyecto</a>
+            <div class="proceso-cta" data-aos="fade-up" data-aos-delay="1100">
+                <div class="cta-content">
+                    <h3 style="color: white;">¿Listo para comenzar tu proyecto?</h3>
+                    <p style="color: white;">Inicia tu transformación digital con un proceso probado y resultados garantizados</p>
+                </div>
+                <a href="#contacto" class="btn-proceso">
+                    <span class="btn-icon"><i class="fas fa-rocket"></i></span>
+                    <span class="btn-text">Comenzar mi proyecto</span>
+                    <span class="btn-arrow">→</span>
+                    <div class="btn-glow"></div>
+                </a>
             </div>
         </div>
     </section>
@@ -1593,6 +1744,17 @@
         </div>
     </div>
 </footer>
+
+    <!-- Botón flotante de WhatsApp -->
+    <div class="whatsapp-float" id="whatsapp-float">
+        <div class="whatsapp-tooltip">¡Escríbenos!</div>
+        <a href="https://wa.link/j01359" target="_blank" class="whatsapp-btn">
+            <svg class="whatsapp-icon" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488"/>
+            </svg>
+            <div class="whatsapp-pulse"></div>
+        </a>
+    </div>
 
     <script src="script-simple.js"></script>
     

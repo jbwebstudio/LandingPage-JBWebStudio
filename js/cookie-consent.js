@@ -282,8 +282,6 @@ class CookieConsent {
     loadAnalyticsCookies() {
         console.log('Cargando cookies de análisis...');
         
-        // Ejemplo: Google Analytics, etc.
-        // Aquí puedes integrar Google Analytics u otras herramientas
         if (typeof gtag !== 'undefined') {
             gtag('consent', 'update', {
                 'analytics_storage': 'granted'

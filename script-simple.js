@@ -368,7 +368,7 @@ function showNotification(message, type = 'info') {
 }
 
 // Botón de scroll to top
-function createScrollToTopButton() {
+/* function createScrollToTopButton() {
     const button = document.createElement('button');
     button.innerHTML = '↑';
     button.className = 'scroll-to-top';
@@ -405,7 +405,7 @@ function createScrollToTopButton() {
     });
     
     document.body.appendChild(button);
-}
+}*/
 
 // Testimonials Slider Functionality
 let currentTestimonial = 0;
@@ -499,13 +499,58 @@ window.goToTestimonial = goToTestimonial;
 if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', function() {
         initMobileMenu();
-        createScrollToTopButton();
+        // createScrollToTopButton();
         initTestimonialsSlider(); // Agregar inicialización del slider
-    });
-} else {
+    });    
+} 
+
+/* else {
     initMobileMenu();
     createScrollToTopButton();
     initTestimonialsSlider(); // Agregar inicialización del slider
 }
-
+*/
 console.log('Script simplificado cargado correctamente');
+
+
+// Tracking específico para cada botón de WhatsApp
+function initDetailedWhatsAppTracking() {
+    // Botón flotante
+    const floatButton = document.querySelector('.whatsapp-btn');
+    if (floatButton) {
+        floatButton.addEventListener('click', function() {
+            fbq('track', 'Contact', {
+                content_name: 'WhatsApp Float Button',
+                content_category: 'Floating Widget',
+                source: 'float_button'
+            });
+            fbq('track', 'Lead');
+        });
+    }
+    
+    // Botón en sección de contacto
+    const contactButton = document.querySelector('.contact-method a[href*="wa.link"]');
+    if (contactButton) {
+        contactButton.addEventListener('click', function() {
+            fbq('track', 'Contact', {
+                content_name: 'WhatsApp Contact Section',
+                content_category: 'Contact Methods',
+                source: 'contact_section'
+            });
+        });
+    }
+    
+    // Botón en footer
+    const footerButton = document.querySelector('.social-link.whatsapp');
+    if (footerButton) {
+        footerButton.addEventListener('click', function() {
+            fbq('track', 'Contact', {
+                content_name: 'WhatsApp Footer',
+                content_category: 'Social Links',
+                source: 'footer'
+            });
+        });
+    }
+}
+
+document.addEventListener('DOMContentLoaded', initDetailedWhatsAppTracking);

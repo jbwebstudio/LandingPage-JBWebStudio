@@ -157,6 +157,73 @@
     transition: all 0.3s ease;
     box-shadow: var(--shadow-sm);
     overflow: hidden;
+    z-index: 10; /* Agregado para asegurar que esté por encima de elementos de fondo */
+}
+
+/* Botones de Servicio */
+.service-premium-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--gradient-primary);
+    color: white;
+    text-decoration: none;
+    padding: 14px 24px;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    width: 100%;
+    justify-content: center;
+    position: relative;
+    z-index: 15; /* Asegurar que los botones estén por encima de todo */
+    cursor: pointer;
+    border: none;
+    outline: none;
+}
+
+/* Efectos de Fondo con z-index corregido */
+.services-premium-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1; /* Mantener en el fondo */
+    opacity: 0.3;
+    pointer-events: none; /* Importante: evitar que interfiera con los clics */
+}
+
+.card-premium-glow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(37, 99, 235, 0.05) 0%, transparent 50%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 2; /* Por debajo del contenido de la tarjeta */
+    pointer-events: none; /* Evitar interferencia con clics */
+}
+
+/* Contenedor con z-index apropiado */
+.services-premium-section .container {
+    position: relative;
+    z-index: 5; /* Por encima del fondo pero por debajo de las tarjetas */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-2xl, 60px) !important;
+}
+
+/* Grid de servicios */
+.services-premium-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: var(--spacing-xl, 40px);
+    margin-top: var(--spacing-2xl, 60px);
+    position: relative;
+    z-index: 8;
 }
 
 .service-premium-card:hover {

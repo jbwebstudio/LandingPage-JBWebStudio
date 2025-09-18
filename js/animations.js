@@ -476,6 +476,18 @@ export const AnimationUtils = {
 // Instancia global del manager de animaciones
 let animationManager = null;
 
+// Animación del logo hero
+document.addEventListener('DOMContentLoaded', function() {
+    const heroLogo = document.querySelector('.hero-logo-image');
+    
+    if (heroLogo) {
+        // Agregar clase loaded después de la animación inicial
+        setTimeout(() => {
+            heroLogo.classList.add('loaded');
+        }, 2000);
+    }
+});
+
 // Inicializar animaciones cuando el DOM esté listo
 export const initAnimations = () => {
     if (document.readyState === 'loading') {
