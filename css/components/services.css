@@ -316,6 +316,11 @@
     color: white;
 }
 
+.service-premium-badge.automation {
+    background: linear-gradient(135deg, #4ecdc4 0%, #44a08d 100%);
+    color: white;
+}
+
 /* Contenido de Servicio */
 .service-premium-title {
     font-size: 1.5rem;
