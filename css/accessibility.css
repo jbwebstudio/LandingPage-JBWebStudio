@@ -1,0 +1,210 @@
+/* ===== ACCESSIBILITY & KEYBOARD NAVIGATION ===== */
+
+/* Focus indicators mejorados */
+*:focus {
+    outline: 2px solid #007bff;
+    outline-offset: 2px;
+    border-radius: 4px;
+}
+
+/* Focus visible para elementos interactivos */
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible,
+[tabindex]:focus-visible {
+    outline: 3px solid #007bff;
+    outline-offset: 2px;
+    box-shadow: 0 0 0 1px rgba(0, 123, 255, 0.25);
+}
+
+/* Eliminar outline por defecto en elementos que no lo necesitan */
+button:focus:not(:focus-visible),
+a:focus:not(:focus-visible),
+input:focus:not(:focus-visible),
+textarea:focus:not(:focus-visible),
+select:focus:not(:focus-visible) {
+    outline: none;
+}
+
+/* Skip links para navegación por teclado */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 6px;
+    background: #000;
+    color: #fff;
+    padding: 8px;
+    text-decoration: none !important;
+    z-index: 9999;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.skip-link:focus {
+    top: 6px;
+}
+
+/* Mejorar contraste en estados hover y focus */
+.btn:hover,
+.btn:focus {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Indicadores de estado para elementos interactivos */
+.nav-link:focus,
+.nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+/* Mejorar visibilidad de elementos de formulario */
+input:focus,
+textarea:focus,
+select:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+/* Estados de error más visibles */
+.form-control.is-invalid:focus {
+    border-color: #dc3545;
+    box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25);
+}
+
+/* Mejorar contraste de texto */
+.text-muted {
+    color: #6c757d !important;
+}
+
+/* Indicadores de carga accesibles */
+.loading-indicator {
+    position: relative;
+}
+
+.loading-indicator::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    margin: -10px 0 0 -10px;
+    border: 2px solid #f3f3f3;
+    border-top: 2px solid #007bff;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Mejorar navegación en dispositivos móviles */
+@media (max-width: 768px) {
+    .nav-link:focus,
+    .nav-link:hover {
+        background-color: rgba(0, 123, 255, 0.1);
+        padding: 12px 16px;
+    }
+    
+    button:focus,
+    .btn:focus {
+        min-height: 44px;
+        min-width: 44px;
+    }
+}
+
+/* Reducir movimiento para usuarios con preferencias de accesibilidad */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* Mejorar contraste en modo alto contraste */
+@media (prefers-contrast: high) {
+    .btn {
+        border: 2px solid currentColor;
+    }
+    
+    .nav-link {
+        border: 1px solid transparent;
+    }
+    
+    .nav-link:focus,
+    .nav-link:hover {
+        border-color: currentColor;
+    }
+}
+
+/* Indicadores de estado para elementos interactivos */
+[aria-expanded="true"] .dropdown-icon {
+    transform: rotate(180deg);
+}
+
+[aria-pressed="true"] {
+    background-color: #007bff;
+    color: white;
+}
+
+/* Mejorar visibilidad de elementos ocultos para lectores de pantalla */
+.sr-only {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    padding: 0 !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    clip: rect(0, 0, 0, 0) !important;
+    white-space: nowrap !important;
+    border: 0 !important;
+}
+
+.sr-only-focusable:focus {
+    position: static !important;
+    width: auto !important;
+    height: auto !important;
+    padding: inherit !important;
+    margin: inherit !important;
+    overflow: visible !important;
+    clip: auto !important;
+    white-space: normal !important;
+}
+
+/* Mejorar navegación por teclado en menús */
+.dropdown-menu {
+    border: 1px solid #dee2e6;
+}
+
+.dropdown-item:focus {
+    background-color: #e9ecef;
+    outline: 2px solid #007bff;
+    outline-offset: -2px;
+}
+
+/* Estados de carga accesibles */
+[aria-busy="true"] {
+    cursor: wait;
+}
+
+/* Mejorar visibilidad de enlaces */
+a:not(.btn):not(.nav-link) {
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 2px;
+}
+
+a:not(.btn):not(.nav-link):hover,
+a:not(.btn):not(.nav-link):focus {
+    text-decoration-thickness: 2px;
+}

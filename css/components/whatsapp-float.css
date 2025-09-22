@@ -20,7 +20,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    text-decoration: none;
+    text-decoration: none !important;
     color: white;
     box-shadow: 
         0 8px 25px rgba(37, 211, 102, 0.4),

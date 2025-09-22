@@ -325,7 +325,7 @@
     border-radius: 50px;
     font-weight: 700;
     font-size: 1.1rem;
-    text-decoration: none;
+    text-decoration: none !important;
     display: inline-flex;
     align-items: center;
     gap: 18px;
@@ -374,7 +374,7 @@
     border-radius: 50px;
     font-weight: 600;
     font-size: 1.1rem;
-    text-decoration: none;
+    text-decoration: none !important;
     display: inline-flex;
     align-items: center;
     gap: 18px;

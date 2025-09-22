@@ -548,7 +548,7 @@
   color: white;
   padding: 18px 36px;
   border-radius: var(--radius-full);
-  text-decoration: none;
+  text-decoration: none !important;
   font-weight: 700;
   font-size: var(--font-size-base);
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);

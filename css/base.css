@@ -28,6 +28,52 @@ body {
     padding: 0 var(--spacing-lg);
 }
 
+/* ===== BOTONES BASE ===== */
+/* Estilos base consolidados para todos los botones */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 14px 28px;
+    border-radius: var(--radius-md);
+    text-decoration: none !important;
+    font-weight: 600;
+    font-size: var(--font-size-base);
+    line-height: 1;
+    transition: var(--transition-normal);
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    white-space: nowrap;
+    user-select: none;
+    font-family: inherit;
+}
+
+.btn:focus {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
+}
+
+.btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none !important;
+}
+
+/* ===== SECCIONES BASE ===== */
+/* Estilos base consolidados para secciones */
+.section {
+    padding: var(--spacing-section) 0;
+    position: relative;
+}
+
+.section-alt {
+    background-color: var(--bg-secondary);
+}
+
 /* Clase highlight utilizada en el HTML */
 .highlight {
     background: var(--gradient-primary);

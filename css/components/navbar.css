@@ -22,7 +22,7 @@
 
 /* Asegurar posicionamiento correcto del contenedor */
 .nav-container {
-    max-width: 1200px;
+    max-width: 95%;    
     margin: 0 auto;
     padding: 0 var(--spacing-lg);
     display: flex;
@@ -80,7 +80,7 @@
 .logo-link {
     display: flex;
     align-items: center;
-    text-decoration: none;
+    text-decoration: none !important;
     transition: var(--transition-normal);
 }
 
@@ -135,7 +135,7 @@
 }
 
 .nav-link {
-    text-decoration: none;
+    text-decoration: none !important;
     color: var(--text-nav);
     font-weight: 500;
     font-size: var(--font-size-sm);
@@ -218,7 +218,7 @@
     padding: 0px 15px;
     border-radius: var(--radius-full);
     font-weight: 600;
-    text-decoration: none;
+    text-decoration: none !important;
     transition: var(--transition-normal);
     display: flex;
     align-items: center;
@@ -312,7 +312,7 @@ body.mobile-menu-open {
 }
 
 .mobile-nav-link {
-    text-decoration: none;
+    text-decoration: none !important;
     color: var(--text-nav);
     font-weight: 500;
     font-size: var(--font-size-lg);
